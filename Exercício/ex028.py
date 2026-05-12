@@ -1,10 +1,13 @@
-n1 = float(input("Digite a primeira nota: "))
-n2 = float(input("Digite a segunda nota: "))
-m = (n1 + n2) / 2
+from random import randint
+from time import sleep #faz ele esperar
 
-print("A sua média foi {:.1f}".format(m))
+aleatorio = randint(0, 5)
+print("Vou pensar em um número entre 0 e 5. Tente adivinhar...")
+jogador = int(input("Em que número eu pensei? "))
+print("Processando...")
+sleep(3) #espera 3 segundos
 
-if m >= 6.0:
-    print("A sua média foi boa! Parabéns")
+if aleatorio == jogador:
+    print("Parabéns! Você conseguiu")
 else:
-    print("Sua média foi ruim! Estude mais")
+    print("Ganhei! Eu pensei no número {} e não no {}".format(aleatorio, jogador))
