@@ -1,13 +1,11 @@
-from random import randint
-from time import sleep #faz ele esperar
+velocidade = float(input('Digite a velocidade do seu carro: '))
 
-aleatorio = randint(0, 5)
-print("Vou pensar em um número entre 0 e 5. Tente adivinhar...")
-jogador = int(input("Em que número eu pensei? "))
-print("Processando...")
-sleep(3) #espera 3 segundos
+multa = (velocidade - 80) * 7
 
-if aleatorio == jogador:
-    print("Parabéns! Você conseguiu")
+
+if velocidade > 80:
+    print('ACIMA DA VELOCIDADE')
+    print('\n')
+    print('Você foi multado em R$ {}'.format(multa))
 else:
-    print("Ganhei! Eu pensei no número {} e não no {}".format(aleatorio, jogador))
+    print('Dentro do Limite')
